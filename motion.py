@@ -5,7 +5,7 @@ import collections
 import math
 
 
-# note to me we can use opo the other if we get an interaction...
+
 class Atom:
     numeric_label = 0
 
@@ -69,18 +69,18 @@ class Universe:
                         set_of_zero_changes_to_one.add(p_zero_check_proximity.numeric_label)
                 self.zero_particles.appendleft(p_zero_to_observe)
 
-            for p_catagorizeing_counter in range(len(self.zero_particles)):
-                p_zero_to_catagorize = self.zero_particles.pop()
-                if p_zero_to_catagorize.numeric_label in set_of_zero_changes_to_one:
-                    self.one_particles.append(p_zero_to_catagorize)
+            for p_categorizing_counter in range(len(self.zero_particles)):
+                p_zero_to_categorize = self.zero_particles.pop()
+                if p_zero_to_categorize.numeric_label in set_of_zero_changes_to_one:
+                    self.one_particles.append(p_zero_to_categorize)
                 else:
-                    self.zero_particles.appendleft(p_zero_to_catagorize)
+                    self.zero_particles.appendleft(p_zero_to_categorize)
 
             age_of_universe += 1
 
 
 test5 = True
 if test5:
-    thisUniverse = Universe(1000)
-    thisUniverse.bang(1000)
+    thisUniverse = Universe(10)
+    thisUniverse.bang(10)
     print(thisUniverse.record_of_the_state_of_the_universe)
